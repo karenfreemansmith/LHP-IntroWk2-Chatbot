@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-compatible">
+    <meta name="viewport" value="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.cs" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery-1.12.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Talk to the Webpage</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Talk to the Webpage</h1>
+      <p>Click a button to say something to the webpage. See what it says back!</p>
+      <button class="btn btn-primary" id="hello">Say "hello"</button>
+      <button class="btn btn-inverse" id="goodbye">Say "goodbye"</button>
+      <button class="btn btn-danger" id="stop">Say "stop copying me!"</button>
+      <div class="row">
+        <div class="col-md-6">
+          <h2>You said: </h2>
+          <ul id="user" class="unstyled">
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h2>The Webpage said back:</h2>
+          <ul id="webpage" class="unstyled">
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
