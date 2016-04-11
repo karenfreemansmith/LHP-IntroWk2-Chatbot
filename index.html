@@ -12,18 +12,19 @@
     <title>Talk to the Webpage</title>
   </head>
   <body>
-    <div class="container">
-      <h1>Talk to the Webpage</h1>
-      <p>Click a button to say something to the webpage. See what it says back!</p>
-      <!-- <form id="conversation"> need prevent default or something to use as form -->
-        <label for="favorite">Tell me something you like: </label>
-        <input type="text" id="favorite"></input>
-        <button class="btn btn-default" id="likes">It's my favorite...</button>
-        <br><br>
-        <button class="btn btn-primary" id="hello">Say "hello"</button>
-        <button class="btn btn-inverse" id="goodbye">Say "goodbye"</button>
-        <button class="btn btn-danger" id="stop">Say "stop copying me!"</button>
-      <!-- </form> -->
+    <div class="container jumbotron">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1>Talk to ChatBot!</h1>
+          <p>Click a button to say something to ChatBot. See what she says back!</p>
+            <button class="btn btn-primary" id="hello">Say "hello"</button>
+            <button class="btn btn-inverse" id="goodbye">Say "goodbye"</button>
+            <br><br>
+            <label for="favorite">Tell me something you like: </label><br>
+            <input type="text" id="favorite"></input>
+            <button class="btn btn-default" id="likes">It's my favorite...</button>
+        </div>
+      </div>
       <div class="row">
         <div class="col-xs-6">
           <h2>You said: </h2>
@@ -31,7 +32,7 @@
           </ul>
         </div>
         <div class="col-xs-6">
-          <h2>The Webpage said back:</h2>
+          <h2>ChatBot Says:</h2>
           <ul id="webpage" class="unstyled">
           </ul>
         </div>

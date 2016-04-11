@@ -8,8 +8,10 @@ __Version 2: April 11, 2016__
 ### Description
 __*A webpage that talks back to the visitor*__
 
-New feature - chatbot has a personality! See if you have anything in common
+New features -
+* chatbot has a personality! See if you have anything in common
 by telling her your favorite things.
+* chatbot got a makeover so she's not so plain anymore
 
 ### Setup/Installation
 *None required. Clone or download and extract to use*
@@ -21,8 +23,6 @@ For questions or comments, please __email [Karen](karenfreemansmith@gmail.com)__
 * boring
   * get rid of the buttons and let visitor enter their own words
   * give chatbot some talking points to respond with (*and make her be nice*)
-* ugly
-  * make a pretty webpage for chatbot to live in
 
 ### Technologies Used
 ###### HTML, CSS, Bootstrap, JavaScript, jQuery

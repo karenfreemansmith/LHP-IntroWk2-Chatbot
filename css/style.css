@@ -1,0 +1,32 @@
+body {
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+#webpage {
+  font-weight: bold;
+}
+
+#user {
+  font-style: italic;
+}
+
+.container {
+  max-width: 780px;
+  margin: auto;
+}
+.jumbotron {
+  background-color: rgb(230, 233, 255);
+}
+.btn-primary {
+  background-color: rgb(235, 82, 108);
+}
+
+.btn-default {
+  background-color: rgb(197, 172, 205);
+}
