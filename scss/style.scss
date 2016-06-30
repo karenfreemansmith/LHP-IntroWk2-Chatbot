@@ -1,8 +1,27 @@
+// Palette URL: http://paletton.com/#uid=15p0C0kw0w0jyC+oRxVy4oIDfjr */
+// As hex codes */
+$color-primary-0: #E40045;	// Main Primary color */
+$color-primary-1: #EB5B87;
+$color-primary-2: #E63369;
+$color-primary-3: #B00035;
+$color-primary-4: #8A002A;
+
+// As RGBa codes */
+$rgba-primary-0: rgba(228,  0, 69,1);	// Main Primary color */
+$rgba-primary-1: rgba(235, 91,135,.25);
+$rgba-primary-2: rgba(230, 51,105,1);
+$rgba-primary-3: rgba(176,  0, 53,1);
+$rgba-primary-4: rgba(138,  0, 42,1);
 body {
-  background-image: url("../img/background.jpg");
+  background: $rgba-primary-1; //url("../img/background.jpg") */
   background-size: cover;
   background-attachment: fixed;
 }
+
+h1, h2 {
+  color: $color-primary-4;
+}
+
 li {
   list-style: none;
   margin-bottom: 5px;
@@ -10,10 +29,12 @@ li {
 
 #webpage {
   font-weight: bold;
+  font-size:1.25em;
 }
 
 #user {
   font-style: italic;
+  font-size:1.5em;
 }
 
 .container {
@@ -21,12 +42,17 @@ li {
   margin: auto;
 }
 .jumbotron {
-  background-color: rgb(230, 233, 255);
+  background-color: $rgba-primary-1;
+  color: $color-primary-4;
+  border-radius: 10px;
 }
 .btn-primary {
-  background-color: rgb(235, 82, 108);
+  background-color: $color-primary-0;
 }
-
+.btn-inverse {
+  background-color: $color-primary-3;
+  color: white;
+}
 .btn-default {
-  background-color: rgb(197, 172, 205);
+  background-color: $color-primary-0;
 }

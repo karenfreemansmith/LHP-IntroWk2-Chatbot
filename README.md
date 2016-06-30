@@ -1,8 +1,7 @@
 # :lips::speech_balloon: [Chatbot](http://karenfreemansmith.github.io/chatbot) :hear_no_evil::see_no_evil::speak_no_evil:
 ![project screenshot](/img/screenshot.jpg)
 
-__Version 2: April 11, 2016__
-
+__Version 1.1.0: June 30, 2016__
 ## by [Karen Freeman-Smith](http://karenfreemansmith.github.io)
 
 ### Description
