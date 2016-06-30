@@ -18,19 +18,24 @@ $(document).ready(function() {
   });
   var yourFavorites = [];
   $("button#likes").click(function() {
-    var myFavorites = ["cats", "dogs", "ice cream", "toys", "cars", "music", "learning stuff"];
+    var myFavorites = [
+      "cats", "dogs", "dolphins",
+      "ice cream", "pizza", "cheesecake",
+      "toys", "cars",
+      "music", "movies", "books",
+      "exercising", "learning stuff"];
     var yourFavorite = $("input#favorite").val();
-    yourFavorites.push(yourFavorite);
+    yourFavorites.unshift(yourFavorite);
     $("ul#user").prepend("<li>I like " + yourFavorite + ".</li>");
     if(myFavorites.includes(yourFavorite)) {
       $("ul#webpage").prepend("<li>I like " + $("input#favorite").val() + " too!</li>");
     } else {
       $("ul#webpage").prepend("<li>I don't really like " + $("input#favorite").val() + " so much.</li>");
     }
-    if(yourFavorites.length > 3) {
+    if(yourFavorites.length%3===0) {
       var thingsIKnow=[];
       thingsIKnow.push(yourFavorites[1], yourFavorites[0], yourFavorites[2]);
-      $("ul#webpage").prepend("<li>I know you really like " + thingsIKnow[0] + ", " + thingsIKnow[1] + ", and " + thingsIKnow[2] + ".</li>");
+      $("ul#webpage").prepend("<li>I know you really like " + thingsIKnow[1] + " and " + thingsIKnow[2] + ".</li>");
     }
 
   });
