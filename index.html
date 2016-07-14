@@ -21,6 +21,22 @@
         "sayings":["Hi!", "Great, but I have to run.", "Bye-bye!"]
       }
     ];
+
+    function getResponse(str) {
+      var greetings=["Hi", "Hello", "Howdy"];
+      var farewells=["Goodbye", "Farewell", "Bye"];
+      var likes=["cheesecake", "pizza", "dogs", "cats", "sunsets", "beach"];
+      var respString="If you say so.";
+      if (greetings.includes(str)) {
+        respString="Hello";
+      } else if (farewells.includes(str)) {
+        respString="Bye-bye";
+      } else if (str.includes("like")) {
+        respString="I like that too!";
+      }
+      return respString;
+    }
+
     var chatApp = angular.module("chatApp",[]);
     chatApp.controller("chatAppCtrl", function($scope) {
       $scope.chat = model;
@@ -29,8 +45,10 @@
 
       $scope.addSaying=function(str){
         $scope.chat[0].sayings.unshift(str);
-        $scope.chat[1].sayings.unshift(str);
+        $scope.chat[1].sayings.unshift(getResponse(str));
       }
+
+
     });
     </script>
   </head>
@@ -54,13 +72,13 @@
       <div class="row">
         <div class="col-xs-6">
           <h2>You said: </h2>
-          <ul id="user" class="unstyled" ng-repeat="saying in chat[0].sayings">
+          <ul id="user" class="unstyled" ng-repeat="saying in chat[0].sayings track by $index">
             <li>{{saying}}</li>
           </ul>
         </div>
         <div class="col-xs-6">
           <h2>ChatBot Says:</h2>
-          <ul id="webpage" class="unstyled" ng-repeat="saying in chat[1].sayings">
+          <ul id="webpage" class="unstyled" ng-repeat="saying in chat[1].sayings track by $index">
             <li>{{saying}}</li>
           </ul>
         </div>

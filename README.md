@@ -1,13 +1,14 @@
 # :lips::speech_balloon: [Chatbot](http://karenfreemansmith.github.io/chatbot) :hear_no_evil::see_no_evil::speak_no_evil:
 ![project screenshot](/img/screenshot.jpg)
 
-__Version 1.1.0: June 30, 2016__
+__Version 2.9.0: July 13, 2016__
 ## by [Karen Freeman-Smith](http://karenfreemansmith.github.io)
 
 ### Description
 __*A webpage that talks back to the visitor*__
 
 New features -
+* converting to Angular.js app
 * chatbot has a personality! See if you have anything in common
 by telling her your favorite things.
 * chatbot got a makeover so she's not so plain anymore
