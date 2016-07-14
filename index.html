@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="chatApp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-compatible">
@@ -8,32 +8,60 @@
     <link href="css/style.css" rel="stylesheet">
     <script src="js/jquery-1.12.2.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
-    <title>Talk to the Webpage</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <title>Chatbot</title>
+    <script>
+    var model=[
+      {
+        "user":"visitor",
+        "sayings":["Hello", "How are you?", "Goodbye"]
+      },
+      {
+        "user":"chatbot",
+        "sayings":["Hi!", "Great, but I have to run.", "Bye-bye!"]
+      }
+    ];
+    var chatApp = angular.module("chatApp",[]);
+    chatApp.controller("chatAppCtrl", function($scope) {
+      $scope.chat = model;
+      $scope.chat[0].sayings=[];
+      $scope.chat[1].sayings=[];
+
+      $scope.addSaying=function(str){
+        $scope.chat[0].sayings.unshift(str);
+        $scope.chat[1].sayings.unshift(str);
+      }
+    });
+    </script>
   </head>
-  <body>
+  <body ng-controller="chatAppCtrl">
     <div class="container jumbotron">
       <div class="row">
         <div class="col-xs-12">
           <h1>Talk to ChatBot!</h1>
-          <p>Click a button to say something to ChatBot. See what she says back!</p>
-            <button class="btn btn-primary" id="hello">Say "hello"</button>
-            <button class="btn btn-inverse" id="goodbye">Say "goodbye"</button>
-            <br><br>
-            <label for="favorite">Tell me something you like: </label><br>
-            <input type="text" id="favorite"></input>
-            <button class="btn btn-default" id="likes">It's my favorite...</button>
+          <p>Say something to ChatBot. See what she says back!</p>
         </div>
+      </div>
+      <div class="row">
+        <form class="form-group">
+          <div class="col-xs-9">
+            <input class="form-control" type="text" ng-model="youSaid">
+          </div><div class="col-xs-3">
+            <button class="btn btn-default form-control" id="likes" ng-click="addSaying(youSaid); youSaid=''">Say it!</button>
+          </div>
+        </form>
       </div>
       <div class="row">
         <div class="col-xs-6">
           <h2>You said: </h2>
-          <ul id="user" class="unstyled">
+          <ul id="user" class="unstyled" ng-repeat="saying in chat[0].sayings">
+            <li>{{saying}}</li>
           </ul>
         </div>
         <div class="col-xs-6">
           <h2>ChatBot Says:</h2>
-          <ul id="webpage" class="unstyled">
+          <ul id="webpage" class="unstyled" ng-repeat="saying in chat[1].sayings">
+            <li>{{saying}}</li>
           </ul>
         </div>
       </div>

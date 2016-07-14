@@ -37,6 +37,76 @@ li {
   font-size:1.5em;
 }
 
+.you {
+  box-sizing: border-box;
+  width: 60%;
+  margin-left: 5%;
+  background-color: pink;
+  color: darkred;
+  font-weight: bold;
+  text-align: center;
+  padding: 25px 5px 25px 40%;
+  border-radius: 50% 0 0 50%;
+}
+
+.me {
+  box-sizing: border-box;
+  width: 60%;
+  margin-left: 35%;
+  background-color: crimson;
+  color: white;
+  font-weight: bold;
+  padding: 25px 40% 25px 5px;
+  text-align: center;
+  border-radius: 0 50% 50% 0;
+}
+
+#talkbubble {
+  width: 120px; height: 80px;
+  background: red;
+  position: relative;
+  -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; }
+#talkbubble:before {
+  content:"";
+  position: absolute;
+  right: 100%; top: 26px;
+  width: 0; height: 0;
+  border-top: 13px solid transparent;
+  border-right: 26px solid red;
+  border-bottom: 13px solid transparent; }
+
+  #toplip {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    margin: auto;
+  }
+  #toplip:before, #toplip:after {
+    position: absolute;
+    content: "";
+    left: 50px; top: 50px;
+    width: 140px; height:70px;
+    background: crimson;
+    border-radius: 9% 8% 90% 2%;
+    transform: rotate(20deg);
+    transform-origin: 70% 132%;
+  }
+  #toplip:after {
+    left: 0;
+    border-radius: 2% 90% 8% 9%;
+    transform: rotate(-200deg);
+    transform-origin :30% 38%;
+  }
+
+  #bottom {
+    background: crimson;
+    height: 55px;
+    width: 260px;
+    margin: auto;
+    border-radius: 100%;
+    transform: translate(-24px, -40px);
+  }
+
 .container {
   max-width: 780px;
   margin: auto;
